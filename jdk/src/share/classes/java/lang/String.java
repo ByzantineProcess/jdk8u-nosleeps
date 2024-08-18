@@ -131,6 +131,11 @@ public final class String
     private static final ObjectStreamField[] serialPersistentFields =
         new ObjectStreamField[0];
 
+    private static void printCharArray(char[] array) {
+        for (char c : array) {
+            System.out.print(c);
+        }
+    }
     /**
      * Initializes a newly created {@code String} object so that it represents
      * an empty character sequence.  Note that use of this constructor is
@@ -143,7 +148,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -164,7 +169,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -183,7 +188,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -230,7 +235,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -309,7 +314,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -372,7 +377,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -413,7 +418,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /* Common private utility method used to bounds check the byte array
@@ -473,7 +478,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -516,7 +521,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -550,7 +555,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -580,7 +585,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -617,7 +622,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -643,7 +648,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -664,7 +669,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
@@ -689,7 +694,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /*
@@ -706,7 +711,7 @@ public final class String
         System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
         System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
         System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
-        System.out.println(result);
+        printCharArray(result);
     }
 
     /**
