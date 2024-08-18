@@ -300,7 +300,10 @@ class Thread implements Runnable {
      *          <i>interrupted status</i> of the current thread is
      *          cleared when this exception is thrown.
      */
-    public static native void sleep(long millis) throws InterruptedException;
+    public static void sleep(long millis)
+    throws InterruptedException {
+        assert true;
+    }
 
     /**
      * Causes the currently executing thread to sleep (temporarily cease
