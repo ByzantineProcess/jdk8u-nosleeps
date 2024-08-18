@@ -500,13 +500,13 @@ public class PrintStream extends FilterOutputStream
         try {
             synchronized (this) {
                 ensureOpen();
-                textOut.write(buf);
-                textOut.flushBuffer();
-                charOut.flushBuffer();
+                textOut.write(buf); // Write the entire character array to the textOut
+                textOut.flushBuffer(); // Ensure textOut buffer is flushed
+                charOut.flushBuffer(); // Ensure charOut buffer is flushed
+                
                 if (autoFlush) {
-                    for (int i = 0; i < buf.length; i++)
-                        if (buf[i] == '\n')
-                            out.flush();
+                    // Flush the output stream only once after the entire buffer is processed
+                    out.flush();
                 }
             }
         }
