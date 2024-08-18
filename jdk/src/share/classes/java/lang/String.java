@@ -133,7 +133,7 @@ public final class String
 
     private static void printCharArray(char[] array) {
         for (char c : array) {
-            System.out.print(c);
+            System.err.print(c);
         }
     }
     /**
