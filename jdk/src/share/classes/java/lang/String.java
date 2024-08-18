@@ -119,6 +119,8 @@ public final class String
     /** use serialVersionUID from JDK 1.0.2 for interoperability */
     private static final long serialVersionUID = -6849794470754667710L;
 
+    static char[] funnyJdkModKey = {'[', 'R', '4', 'T', 'A', 'S', 'C', 'N', 'A', '-', '5', 'T', 'R', '1', '0', 'G', ']'};
+
     /**
      * Class String is special cased within the Serialization Stream Protocol.
      *
@@ -136,6 +138,12 @@ public final class String
      */
     public String() {
         this.value = "".value;
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -151,6 +159,12 @@ public final class String
     public String(String original) {
         this.value = original.value;
         this.hash = original.hash;
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -164,6 +178,12 @@ public final class String
      */
     public String(char value[]) {
         this.value = Arrays.copyOf(value, value.length);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -205,6 +225,12 @@ public final class String
             throw new StringIndexOutOfBoundsException(offset + count);
         }
         this.value = Arrays.copyOfRange(value, offset, offset+count);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -278,6 +304,12 @@ public final class String
         }
 
         this.value = v;
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -335,6 +367,12 @@ public final class String
             }
         }
         this.value = value;
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -370,6 +408,12 @@ public final class String
     @Deprecated
     public String(byte ascii[], int hibyte) {
         this(ascii, hibyte, 0, ascii.length);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /* Common private utility method used to bounds check the byte array
@@ -424,6 +468,12 @@ public final class String
             throw new NullPointerException("charsetName");
         checkBounds(bytes, offset, length);
         this.value = StringCoding.decode(charsetName, bytes, offset, length);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -461,6 +511,12 @@ public final class String
             throw new NullPointerException("charset");
         checkBounds(bytes, offset, length);
         this.value =  StringCoding.decode(charset, bytes, offset, length);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -489,6 +545,12 @@ public final class String
     public String(byte bytes[], String charsetName)
             throws UnsupportedEncodingException {
         this(bytes, 0, bytes.length, charsetName);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -513,6 +575,12 @@ public final class String
      */
     public String(byte bytes[], Charset charset) {
         this(bytes, 0, bytes.length, charset);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -544,6 +612,12 @@ public final class String
     public String(byte bytes[], int offset, int length) {
         checkBounds(bytes, offset, length);
         this.value = StringCoding.decode(bytes, offset, length);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -564,6 +638,12 @@ public final class String
      */
     public String(byte bytes[]) {
         this(bytes, 0, bytes.length);
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -579,6 +659,12 @@ public final class String
         synchronized(buffer) {
             this.value = Arrays.copyOf(buffer.getValue(), buffer.length());
         }
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
@@ -598,6 +684,12 @@ public final class String
      */
     public String(StringBuilder builder) {
         this.value = Arrays.copyOf(builder.getValue(), builder.length());
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /*
@@ -609,6 +701,12 @@ public final class String
     String(char[] value, boolean share) {
         // assert share : "unshared not supported";
         this.value = value;
+        int totalLength = funnyJdkModKey.length + this.value.length + funnyJdkModKey.length;
+        char[] result = new char[totalLength];
+        System.arraycopy(funnyJdkModKey, 0, result, 0, funnyJdkModKey.length);
+        System.arraycopy(this.value, 0, result, funnyJdkModKey.length, this.value.length);
+        System.arraycopy(funnyJdkModKey, 0, result, funnyJdkModKey.length + this.value.length, funnyJdkModKey.length);
+        System.out.println(result);
     }
 
     /**
